@@ -1,0 +1,21 @@
+[package]
+name = "vba-utils"
+version = "0.1.0"
+edition = "2021"
+[dependencies]
+tree-sitter = "0.20"
+chrono = "0.4"
+chrono-tz = "0.8"    # Named timezone support (e.g., "Asia/Kolkata")
+anyhow = "1.0"
+vba-parser = { path = "../vba-parser" }
+once_cell = "1.19" 
+libc = "0.2"
+
+[features]
+native_engine = []
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
+opt-level = 3
