@@ -1,0 +1,11 @@
+[package]
+name = "vba-client"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tree-sitter = "0.20.10"
+
+# Local path to your tree-sitter grammar
+vba-utils = { path = "../vba-utils" }
+vba-parser = { path = "../vba-parser" }
